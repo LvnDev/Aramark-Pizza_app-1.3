@@ -12,36 +12,29 @@
           <Property Name="Customer_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Username" Type="varchar" MaxLength="30" />
           <Property Name="Password" Type="varchar" MaxLength="30" />
-          <Property Name="FullName" Type="varchar" MaxLength="30" />
+          <Property Name="FullName" Type="varchar" MaxLength="60" />
         </EntityType>
-        <EntityType Name="Pizza">
+        <EntityType Name="Orders">
           <Key>
-            <PropertyRef Name="PizzaId" />
+            <PropertyRef Name="OrderId" />
           </Key>
-          <Property Name="PizzaId" Type="int" Nullable="false" />
-          <Property Name="Pizza" Type="varchar" MaxLength="50" />
-          <Property Name="Cost" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="Pizza" Type="int" />
+          <Property Name="Customer" Type="varchar" MaxLength="30" />
+          <Property Name="Total" Type="int" />
         </EntityType>
         <EntityContainer Name="AramarkPizzaDatabaseModelStoreContainer">
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Pizza" EntityType="Self.Pizza" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AramarkPizzaDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="AramarkPizzaDatabaseEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Pizzas" EntityType="AramarkPizzaDatabaseModel.Pizza" />
           <EntitySet Name="Customers" EntityType="AramarkPizzaDatabaseModel.Customer" />
+          <EntitySet Name="Orders" EntityType="AramarkPizzaDatabaseModel.Order" />
         </EntityContainer>
-        <EntityType Name="Pizza">
-          <Key>
-            <PropertyRef Name="PizzaId" />
-          </Key>
-          <Property Name="PizzaId" Type="Int32" Nullable="false" />
-          <Property Name="Pizza1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Cost" Type="Decimal" Precision="18" Scale="0" />
-        </EntityType>
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="Customer_Id" />
@@ -49,7 +42,16 @@
           <Property Name="Customer_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="FullName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="Pizza" Type="Int32" />
+          <Property Name="Customer" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Total" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -57,15 +59,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="AramarkPizzaDatabaseModelStoreContainer" CdmEntityContainer="AramarkPizzaDatabaseEntities">
-          <EntitySetMapping Name="Pizzas">
-            <EntityTypeMapping TypeName="AramarkPizzaDatabaseModel.Pizza">
-              <MappingFragment StoreEntitySet="Pizza">
-                <ScalarProperty Name="Cost" ColumnName="Cost" />
-                <ScalarProperty Name="Pizza1" ColumnName="Pizza" />
-                <ScalarProperty Name="PizzaId" ColumnName="PizzaId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="AramarkPizzaDatabaseModel.Customer">
               <MappingFragment StoreEntitySet="Customer">
@@ -73,6 +66,16 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Customer_Id" ColumnName="Customer_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="AramarkPizzaDatabaseModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="Pizza" ColumnName="Pizza" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

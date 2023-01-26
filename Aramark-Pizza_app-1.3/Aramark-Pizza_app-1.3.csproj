@@ -134,7 +134,7 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pizza.cs">
+    <Compile Include="Order.cs">
       <DependentUpon>AramarkPizzaEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

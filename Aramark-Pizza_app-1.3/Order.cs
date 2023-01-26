@@ -12,10 +12,11 @@ namespace Aramark_Pizza_app_1._3
     using System;
     using System.Collections.Generic;
     
-    public partial class Pizza
+    public partial class Order
     {
-        public int PizzaId { get; set; }
-        public string Pizza1 { get; set; }
-        public Nullable<decimal> Cost { get; set; }
+        public int OrderId { get; set; }
+        public Nullable<int> Pizza { get; set; }
+        public string Customer { get; set; }
+        public Nullable<int> Total { get; set; }
     }
 }

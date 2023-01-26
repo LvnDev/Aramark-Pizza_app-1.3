@@ -25,7 +25,7 @@ namespace Aramark_Pizza_app_1._3
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Pizza> Pizzas { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
     }
 }
