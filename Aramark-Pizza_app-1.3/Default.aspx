@@ -21,7 +21,7 @@
         <br />
         <asp:Label runat="server" Text="Don't have an account?"></asp:Label>
         <br />
-        <asp:Button ID="RedirectSignupButton" runat="server" Text="SignUp!" />
+        <asp:Button ID="RedirectSignupButton" runat="server" Text="SignUp!" OnClientClick="RedirectSignupBtn_Click" OnClick="RedirectSignupButton_Click" />
     </form>
 </body>
 </html>

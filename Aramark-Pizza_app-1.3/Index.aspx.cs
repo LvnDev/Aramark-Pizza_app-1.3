@@ -8,10 +8,10 @@ using System.Web.UI.WebControls;
 namespace Aramark_Pizza_app_1._3
 {
     public partial class Index : System.Web.UI.Page
-    {
+    {      
+        double P = 3.8;
+        double M = 3.6;
         double total;
-        double P = 3.80;
-        int times;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,12 +23,9 @@ namespace Aramark_Pizza_app_1._3
 
         protected void pepperoniBtn_Click(object sender, ImageClickEventArgs e)
         {
-            while ()
-            {
-                double totalp = P * ++times;
-                string text_addp = totalp.ToString();
-                Sumlable.Text = "£" + text_addp;
-            }
+            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 8));
+            total = total + P;      
+            Sumlable.Text = "£" + total;
         }
     }
 }

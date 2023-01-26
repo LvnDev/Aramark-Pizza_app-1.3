@@ -11,7 +11,7 @@ namespace Aramark_Pizza_app_1._3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)
@@ -31,7 +31,10 @@ namespace Aramark_Pizza_app_1._3
             }
         }
 
-        
+        protected void RedirectSignupButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignUp.aspx");
+        }
     }
     
 }

@@ -33,13 +33,13 @@ namespace Aramark_Pizza_app_1._3
         protected global::System.Web.UI.WebControls.Label FullNameLable;
 
         /// <summary>
-        /// cartBtn control.
+        /// pAmountlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton cartBtn;
+        protected global::System.Web.UI.WebControls.Label pAmountlbl;
 
         /// <summary>
         /// pepperoniBtn control.
@@ -49,6 +49,15 @@ namespace Aramark_Pizza_app_1._3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton pepperoniBtn;
+
+        /// <summary>
+        /// mAmountlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mAmountlbl;
 
         /// <summary>
         /// margeritaBtn control.
@@ -67,5 +76,14 @@ namespace Aramark_Pizza_app_1._3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Sumlable;
+
+        /// <summary>
+        /// redirectPayment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button redirectPayment;
     }
 }
