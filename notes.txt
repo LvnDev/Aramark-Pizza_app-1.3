@@ -1,0 +1,11 @@
+I will need to make a payment page to display the total and amounts of pizza using sessions
+
+1. Session["FullPayment"] = "";
+2. Session["Pepperoni"] = "";
+3. Session["Margherita"] = "";
+
+after they clicked payment, I will need to create a record of orders that has been created saying.
+1. Pizza
+2. Full Total
+3. Customer name
+4. (maybe) purchase date and time.
