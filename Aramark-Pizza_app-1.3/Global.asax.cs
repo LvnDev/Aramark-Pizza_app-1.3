@@ -24,6 +24,10 @@ namespace Aramark_Pizza_app_1._3
             Session["FullName"] = "";
 
             Session["FullPayment"] = "";
+            
+            Session["Pepperoni"] = "";
+            
+            Session["Margherita"] = ""; 
         }
     }
 }
