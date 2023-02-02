@@ -15,8 +15,12 @@ namespace Aramark_Pizza_app_1._3
     public partial class Order
     {
         public int OrderId { get; set; }
-        public Nullable<int> Pizza { get; set; }
-        public string Customer { get; set; }
-        public Nullable<int> Total { get; set; }
+        public Nullable<int> CustID { get; set; }
+        public Nullable<int> Pepperoni { get; set; }
+        public Nullable<int> Margherita { get; set; }
+        public Nullable<decimal> Total { get; set; }
+        public string PaymentOption { get; set; }
+    
+        public virtual Customer Customer { get; set; }
     }
 }

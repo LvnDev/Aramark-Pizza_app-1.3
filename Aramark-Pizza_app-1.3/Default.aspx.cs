@@ -22,6 +22,7 @@ namespace Aramark_Pizza_app_1._3
             {
                 if (LUsernameTxtbox.Text == customer.Username && LPasswordTxtbox.Text == customer.Password)
                 {
+                    Session["CustomerID"] = customer.Customer_Id;
                     Session["username"] = customer.Username; 
                     Session["password"] = customer.Password;
                     Session["FullName"] = customer.FullName;

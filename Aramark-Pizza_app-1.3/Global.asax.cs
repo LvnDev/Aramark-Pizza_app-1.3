@@ -17,6 +17,8 @@ namespace Aramark_Pizza_app_1._3
 
         protected void Session_start(object sender, EventArgs e)
         {
+            Session["CustomerID"] = "";
+
             Session["username"] = "";
 
             Session["password"] = "";
@@ -24,6 +26,10 @@ namespace Aramark_Pizza_app_1._3
             Session["FullName"] = "";
 
             Session["FullPayment"] = "";
+
+            Session["PPizza"] = "";
+
+            Session["MPizza"] = "";
         }
     }
 }

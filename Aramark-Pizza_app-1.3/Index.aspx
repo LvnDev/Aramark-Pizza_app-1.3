@@ -33,7 +33,8 @@
         <br />
         <br />
         <br />
-        <asp:Label ID="Sumlable" runat="server" Text="Price: £0.00"></asp:Label>
+        <asp:Label runat="server" Text="Total Pay: "></asp:Label>
+        <asp:Label ID="Sumlable" runat="server" Text="£0.00"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
         <br />
         <br />
         <asp:Button ID="redirectPayment" runat="server" Text="pay?" OnClick="redirectPayment_Click" />

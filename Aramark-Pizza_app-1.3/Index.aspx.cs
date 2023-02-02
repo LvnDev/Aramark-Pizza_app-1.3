@@ -27,24 +27,27 @@ namespace Aramark_Pizza_app_1._3
 
         protected void pepperoniBtn_Click(object sender, ImageClickEventArgs e)
         {
+
             Pcount = int.Parse(pAmountlbl.Text.ToString());
             Pcount = Pcount + addpizza;
             pAmountlbl.Text = Pcount.ToString();
 
-            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 8));
+            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 1));
             total = total + P;      
-            Sumlable.Text = "Price: £" + total;
+            Sumlable.Text = "£" + total;
         }
 
         protected void pRemoveBtn_Click(object sender, EventArgs e)
         {
+
             Pcount = int.Parse(pAmountlbl.Text.ToString());
             Pcount = Pcount - addpizza;
             pAmountlbl.Text = Pcount.ToString();
 
-            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 8));
+            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 1));
             total = total - P;
-            Sumlable.Text = "Price: £" + total;
+            Sumlable.Text = "£" + total;
+
         }
 
         protected void margeritaBtn_Click(object sender, ImageClickEventArgs e)
@@ -53,25 +56,34 @@ namespace Aramark_Pizza_app_1._3
             Mcount = Mcount + addpizza;
             mAmountlbl.Text = Mcount.ToString();
 
-            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 8));
+            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 1));
             total = total + M;
-            Sumlable.Text = "Price: £" + total;
+            Sumlable.Text = "£" + total;
         }
 
         protected void mRemoveBtn_Click(object sender, EventArgs e)
         {
+
             Mcount = int.Parse(mAmountlbl.Text.ToString());
             Mcount = Mcount - addpizza;
             mAmountlbl.Text = Mcount.ToString();
 
-            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 8));
+            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 1));
             total = total - M;
-            Sumlable.Text = "Price: £" + total;
+            Sumlable.Text = "£" + total;
         }
 
         protected void redirectPayment_Click(object sender, EventArgs e)
         {
-            Session["FullPayment"] = "";
+
+                Session["FullPayment"] = Sumlable.Text;
+
+                Session["PPizza"] = pAmountlbl.Text;
+
+                Session["MPizza"] = mAmountlbl.Text;
+
+                Response.Redirect("Payment.aspx");
+
         }
     }
 }

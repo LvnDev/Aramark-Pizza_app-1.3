@@ -26,6 +26,7 @@ namespace Aramark_Pizza_app_1._3
         }
     
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Staff> Staffs { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
     }
 }
