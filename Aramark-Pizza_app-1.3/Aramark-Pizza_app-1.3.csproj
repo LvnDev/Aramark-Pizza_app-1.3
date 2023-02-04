@@ -89,6 +89,8 @@
       <DependentUpon>AramarkPizzaEntities.edmx</DependentUpon>
       <LastGenOutput>AramarkPizzaEntities.cs</LastGenOutput>
     </Content>
+    <Content Include="EndPayment.aspx" />
+    <Content Include="images\Aramark_Logo.png" />
     <Content Include="images\cart.png" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -124,6 +126,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EndPayment.aspx.cs">
+      <DependentUpon>EndPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EndPayment.aspx.designer.cs">
+      <DependentUpon>EndPayment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

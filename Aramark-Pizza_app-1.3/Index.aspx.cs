@@ -23,6 +23,10 @@ namespace Aramark_Pizza_app_1._3
             string name = nameconvert.ToString();
             FullNameLable.Text = name;
 
+            var custIDconvert = Session["CustomerID"];
+            string custID = custIDconvert.ToString();
+            custIDlable.Text = custID;
+
         }
 
         protected void pepperoniBtn_Click(object sender, ImageClickEventArgs e)
@@ -82,8 +86,14 @@ namespace Aramark_Pizza_app_1._3
 
                 Session["MPizza"] = mAmountlbl.Text;
 
+
                 Response.Redirect("Payment.aspx");
 
+        }
+
+        protected void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
         }
     }
 }

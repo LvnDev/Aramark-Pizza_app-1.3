@@ -24,6 +24,15 @@ namespace Aramark_Pizza_app_1._3
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// LogoutBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LogoutBtn;
+
+        /// <summary>
         /// FullNameLable control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace Aramark_Pizza_app_1._3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label FullNameLable;
+
+        /// <summary>
+        /// custIDlable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label custIDlable;
 
         /// <summary>
         /// pAmountlbl control.

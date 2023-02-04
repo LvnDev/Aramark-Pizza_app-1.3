@@ -9,7 +9,16 @@
 <body>
     <form id="form1" runat="server">
         <h1>Welcome!</h1>
+        <br />
+        <asp:Label runat="server" Text="Wrong Account?"></asp:Label>
+        <br />
+        <asp:Button ID="LogoutBtn" runat="server" Text="Log out" OnClick="LogoutBtn_Click" />
+        <br />
+        <br />
         <asp:Label ID="FullNameLable" runat="server" Text=""></asp:Label>
+        <br />
+        <asp:Label runat="server" Text="ID: "></asp:Label>
+        <asp:Label ID="custIDlable" runat="server" Text="Label"></asp:Label>
         <br />
         <br />
         <asp:Label runat="server" Text="Please click the images to add items"></asp:Label>

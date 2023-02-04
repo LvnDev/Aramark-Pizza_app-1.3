@@ -19,6 +19,8 @@ namespace Aramark_Pizza_app_1._3
         {
             Session["CustomerID"] = "";
 
+            Session["OrderID"] = "";
+
             Session["username"] = "";
 
             Session["password"] = "";
