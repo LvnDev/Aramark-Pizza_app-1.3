@@ -9,9 +9,6 @@
 <body>
     <form id="form1" runat="server">
         <h1>Login</h1>
-        <div style="text-align:right;">
-        <asp:Button ID="staffLoginRedirect" runat="server" Text="Staff Login" BackColor="#FFCC66" OnClick="staffLoginRedirect_Click" />
-        </div>
         <asp:Label runat="server" Text="Username"></asp:Label>
         <asp:TextBox ID="LUsernameTxtbox" runat="server"></asp:TextBox>
         <br />
@@ -20,6 +17,11 @@
         <asp:TextBox ID="LPasswordTxtbox" runat="server" Type="password"></asp:TextBox>
         <br />
         <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click" />
+        <br />
+        <br />
+        <asp:Button ID="staffLoginRedirect" runat="server" Text="Staff Login" BackColor="#FFCC66" OnClick="staffLoginRedirect_Click" />
+        <br />
+        <asp:Label ID="errorLbl" runat="server" Text=""></asp:Label>
         <br />
         <br />
         <asp:Label runat="server" Text="Don't have an account?"></asp:Label>

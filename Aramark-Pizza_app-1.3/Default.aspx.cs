@@ -11,7 +11,11 @@ namespace Aramark_Pizza_app_1._3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            Session["CustomerID"] = "";
+            Session["StaffID"] = "";
+            Session["username"] = "";
+            Session["password"] = "";
+            Session["FullName"] = "";
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)

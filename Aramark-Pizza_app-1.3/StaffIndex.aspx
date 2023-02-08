@@ -26,9 +26,9 @@
         </div>
         <h3>Orders List</h3>
         <!--SQL DATA SHEET BELOW -->
-        <asp:GridView ID="Orders" runat="server" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" AutoGenerateColumns="False" DataKeyNames="OrderId" DataSourceID="OrdersDataSource" Width="879px">
+        <asp:GridView ID="Orders" runat="server" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" AutoGenerateColumns="False" DataKeyNames="OrderId" DataSourceID="OrdersDataSource" Width="879px" OnSelectedIndexChanged="Orders_SelectedIndexChanged">
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="OrderId" HeaderText="OrderId" InsertVisible="False" ReadOnly="True" SortExpression="OrderId" />
                 <asp:BoundField DataField="CustID" HeaderText="CustID" SortExpression="CustID" />
                 <asp:BoundField DataField="Pepperoni" HeaderText="Pepperoni" SortExpression="Pepperoni" />
@@ -79,8 +79,16 @@
         </asp:SqlDataSource>
         <!-- SQL DATA SHEET ABOVE -->
         <br />
+        <asp:Label runat="server" Text="Selected Customer: "></asp:Label>
+        &nbsp;
+        <asp:Label runat="server" Text="ID: "></asp:Label>
+        <asp:Label ID="custIDlbl" runat="server"></asp:Label>
+&nbsp;
+        <asp:Label runat="server" Text="| Full Name: "></asp:Label>
+        <asp:Label ID="custNamelbl" runat="server"></asp:Label>
         <br />
-        <br />
+        <h5>Edit Tools</h5>
+        <asp:Button ID="sqlDelBtn" runat="server" Text="Delete" BackColor="#CC0000" ForeColor="White" Height="40px" Width="85px" OnClick="sqlDelBtn_Click" />
     </form>
 </body>
 </html>

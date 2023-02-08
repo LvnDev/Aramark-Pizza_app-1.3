@@ -1,9 +1,11 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace Aramark_Pizza_app_1._3
 {
@@ -23,6 +25,37 @@ namespace Aramark_Pizza_app_1._3
             Session["FullName"] = "";
 
             Response.Redirect("Default.aspx");
+        }
+
+        protected void sqlDelBtn_Click(object sender, EventArgs e)
+        {
+            AramarkPizzaDatabaseEntities db = new AramarkPizzaDatabaseEntities();
+
+            var order = db.Orders.Find(Orders.SelectedValue);
+            db.Entry(order).State = System.Data.Entity.EntityState.Deleted;
+            db.SaveChanges();
+            Orders.DataBind();
+            custIDlbl.Text = "";
+            custNamelbl.Text = "";
+        }
+
+        protected void Orders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AramarkPizzaDatabaseEntities db = new AramarkPizzaDatabaseEntities();
+            var dbcust = db.Customers;
+
+            int c = 2;
+            custIDlbl.Text = Orders.SelectedRow.Cells[c].Text;
+            int custIDconvert = Int32.Parse(custIDlbl.Text);
+
+            foreach(var customer in dbcust)
+            {
+                if(customer.Customer_Id == custIDconvert)
+                {
+                    custNamelbl.Text = customer.FullName.ToString();
+                }
+            }
+            
         }
     }
 }
