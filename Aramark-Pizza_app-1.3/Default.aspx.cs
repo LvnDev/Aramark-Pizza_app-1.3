@@ -36,6 +36,11 @@ namespace Aramark_Pizza_app_1._3
         {
             Response.Redirect("SignUp.aspx");
         }
+
+        protected void staffLoginRedirect_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("StaffLogin.aspx");
+        }
     }
     
 }

@@ -9,6 +9,9 @@
 <body>
     <form id="form1" runat="server">
         <h1>Login</h1>
+        <div style="text-align:right;">
+        <asp:Button ID="staffLoginRedirect" runat="server" Text="Staff Login" BackColor="#FFCC66" OnClick="staffLoginRedirect_Click" />
+        </div>
         <asp:Label runat="server" Text="Username"></asp:Label>
         <asp:TextBox ID="LUsernameTxtbox" runat="server"></asp:TextBox>
         <br />

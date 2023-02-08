@@ -17,6 +17,8 @@ namespace Aramark_Pizza_app_1._3
 
         protected void Session_start(object sender, EventArgs e)
         {
+            Session["StaffID"] = "";
+
             Session["CustomerID"] = "";
 
             Session["OrderID"] = "";

@@ -99,6 +99,8 @@
     <Content Include="images\Pepperoni_Pizza.jpg" />
     <Content Include="Payment.aspx" />
     <Content Include="SignUp.aspx" />
+    <Content Include="StaffIndex.aspx" />
+    <Content Include="StaffLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +166,20 @@
     </Compile>
     <Compile Include="Staff.cs">
       <DependentUpon>AramarkPizzaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffIndex.aspx.cs">
+      <DependentUpon>StaffIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffIndex.aspx.designer.cs">
+      <DependentUpon>StaffIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffLogin.aspx.cs">
+      <DependentUpon>StaffLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffLogin.aspx.designer.cs">
+      <DependentUpon>StaffLogin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
