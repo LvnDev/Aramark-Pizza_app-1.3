@@ -36,31 +36,6 @@
         <br />
         <asp:Button ID="payBtn" runat="server" Text="Pay" OnClick="payBtn_Click" />
         <br />
-        <br />
-        <br />
-        <asp:GridView ID="grdSelectedOrders" runat="server" AutoGenerateColumns="False" DataKeyNames="OrderId" DataSourceID="SqlDataSource1" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
-            <AlternatingRowStyle BackColor="PaleGoldenrod" />
-            <Columns>
-                <asp:BoundField DataField="OrderId" HeaderText="OrderId" ReadOnly="True" SortExpression="OrderId" />
-                <asp:BoundField DataField="CustID" HeaderText="CustID" SortExpression="CustID" />
-                <asp:BoundField DataField="Pepperoni" HeaderText="Pepperoni" SortExpression="Pepperoni" />
-                <asp:BoundField DataField="Margherita" HeaderText="Margherita" SortExpression="Margherita" />
-                <asp:BoundField DataField="Total" HeaderText="Total" SortExpression="Total" />
-                <asp:BoundField DataField="PaymentOption" HeaderText="PaymentOption" ReadOnly="True" SortExpression="PaymentOption" />
-            </Columns>
-            <FooterStyle BackColor="Tan" />
-            <HeaderStyle BackColor="Tan" Font-Bold="True" />
-            <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
-            <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
-            <SortedAscendingCellStyle BackColor="#FAFAE7" />
-            <SortedAscendingHeaderStyle BackColor="#DAC09E" />
-            <SortedDescendingCellStyle BackColor="#E1DB9C" />
-            <SortedDescendingHeaderStyle BackColor="#C2A47B" />
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Orders]"></asp:SqlDataSource>
-        <br />
-        <br />
-        <br />
     </form>
 </body>
 </html>

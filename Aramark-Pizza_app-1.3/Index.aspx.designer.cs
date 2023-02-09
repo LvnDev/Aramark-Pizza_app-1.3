@@ -114,6 +114,15 @@ namespace Aramark_Pizza_app_1._3
         protected global::System.Web.UI.WebControls.Label Sumlable;
 
         /// <summary>
+        /// errorLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorLbl;
+
+        /// <summary>
         /// redirectPayment control.
         /// </summary>
         /// <remarks>

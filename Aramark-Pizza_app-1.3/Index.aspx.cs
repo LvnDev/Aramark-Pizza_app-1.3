@@ -39,18 +39,29 @@ namespace Aramark_Pizza_app_1._3
             total = Double.Parse(Sumlable.Text.ToString().Remove(0, 1));
             total = total + P;      
             Sumlable.Text = "£" + total;
+
+            errorLbl.Text = "";
         }
 
         protected void pRemoveBtn_Click(object sender, EventArgs e)
         {
 
             Pcount = int.Parse(pAmountlbl.Text.ToString());
-            Pcount = Pcount - addpizza;
-            pAmountlbl.Text = Pcount.ToString();
 
-            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 1));
-            total = total - P;
-            Sumlable.Text = "£" + total;
+            if(Pcount < 1)
+            {
+                Pcount = 0;
+            }
+            else
+            {
+                Pcount = Pcount - addpizza;
+
+                pAmountlbl.Text = Pcount.ToString();
+
+                total = Double.Parse(Sumlable.Text.ToString().Remove(0, 1));
+                total = total - P;
+                Sumlable.Text = "£" + total;
+            }
 
         }
 
@@ -63,31 +74,44 @@ namespace Aramark_Pizza_app_1._3
             total = Double.Parse(Sumlable.Text.ToString().Remove(0, 1));
             total = total + M;
             Sumlable.Text = "£" + total;
+            errorLbl.Text = "";
         }
 
         protected void mRemoveBtn_Click(object sender, EventArgs e)
         {
 
             Mcount = int.Parse(mAmountlbl.Text.ToString());
-            Mcount = Mcount - addpizza;
-            mAmountlbl.Text = Mcount.ToString();
+            if(Mcount < 1)
+            {
+                Mcount = 0;
+            }
+            else
+            {
+                Mcount = Mcount - addpizza;
+                mAmountlbl.Text = Mcount.ToString();
 
-            total = Double.Parse(Sumlable.Text.ToString().Remove(0, 1));
-            total = total - M;
-            Sumlable.Text = "£" + total;
+                total = Double.Parse(Sumlable.Text.ToString().Remove(0, 1));
+                total = total - M;
+                Sumlable.Text = "£" + total;
+            }
+
         }
 
         protected void redirectPayment_Click(object sender, EventArgs e)
         {
-
+            if(Mcount < 1 || Pcount < 1)
+            {
+                errorLbl.Text = "Error Please add atleast 1 Pizza";
+            }
+            else 
+            {
                 Session["FullPayment"] = Sumlable.Text;
-
                 Session["PPizza"] = pAmountlbl.Text;
-
                 Session["MPizza"] = mAmountlbl.Text;
 
-
                 Response.Redirect("Payment.aspx");
+            }
+
 
         }
 

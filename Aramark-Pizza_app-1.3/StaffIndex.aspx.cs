@@ -24,7 +24,7 @@ namespace Aramark_Pizza_app_1._3
             Session["password"] = "";
             Session["FullName"] = "";
 
-            Response.Redirect("Default.aspx");
+            Response.Redirect("StaffLogin.aspx");
         }
 
         protected void sqlDelBtn_Click(object sender, EventArgs e)

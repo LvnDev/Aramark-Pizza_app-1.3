@@ -44,6 +44,7 @@
         <br />
         <asp:Label runat="server" Text="Total Pay: "></asp:Label>
         <asp:Label ID="Sumlable" runat="server" Text="£0.00"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <asp:Label ID="errorLbl" runat="server"></asp:Label>
         <br />
         <br />
         <asp:Button ID="redirectPayment" runat="server" Text="pay?" OnClick="redirectPayment_Click" />
