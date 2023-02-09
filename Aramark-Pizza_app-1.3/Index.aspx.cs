@@ -50,7 +50,7 @@ namespace Aramark_Pizza_app_1._3
 
             if(Pcount < 1)
             {
-                Pcount = 0;
+               
             }
             else
             {
@@ -83,7 +83,7 @@ namespace Aramark_Pizza_app_1._3
             Mcount = int.Parse(mAmountlbl.Text.ToString());
             if(Mcount < 1)
             {
-                Mcount = 0;
+               
             }
             else
             {
@@ -99,11 +99,14 @@ namespace Aramark_Pizza_app_1._3
 
         protected void redirectPayment_Click(object sender, EventArgs e)
         {
-            if(Mcount < 1 || Pcount < 1)
+            int pconvert = Int32.Parse(pAmountlbl.Text);
+            int mconvert = Int32.Parse(mAmountlbl.Text);
+
+            if(pconvert == 0 && mconvert == 0)
             {
                 errorLbl.Text = "Error Please add atleast 1 Pizza";
             }
-            else 
+            else if(pconvert > 0 || mconvert > 0)
             {
                 Session["FullPayment"] = Sumlable.Text;
                 Session["PPizza"] = pAmountlbl.Text;
