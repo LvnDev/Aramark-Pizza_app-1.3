@@ -11,7 +11,7 @@
         <div style="text-align:center;">
             <asp:Image runat="server" ImageUrl="~/images/Aramark_Logo.png" />
             <h2>Staff Login</h2>
-            <asp:Button ID="custLoginbtn" runat="server" Text="Go back to Customer page" BackColor="#3399FF" />
+            <asp:Button ID="custLoginbtn" runat="server" Text="Go back to Customer page" BackColor="#3399FF" OnClick="custLoginbtn_Click" />
             <br />
             <br />
             <asp:Label runat="server" Text="Username "></asp:Label>
