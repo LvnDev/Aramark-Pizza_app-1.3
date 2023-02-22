@@ -24,7 +24,7 @@ namespace Aramark_Pizza_app_1._3
             FullNameLable.Text = name;
 
             var custIDconvert = Session["CustomerID"];
-            string custID = custIDconvert.ToString();
+            var custID = custIDconvert.ToString();
             custIDlable.Text = custID;
 
         }

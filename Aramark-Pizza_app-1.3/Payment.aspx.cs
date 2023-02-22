@@ -27,15 +27,17 @@ namespace Aramark_Pizza_app_1._3
 
         protected void payBtn_Click(object sender, EventArgs e)
         {
-            payBtn.Visible = false;
+            
             string paymentbtns;
             if(cashRadioBtn.Checked )
             {
                paymentbtns= cashRadioBtn.Text;
+               payBtn.Visible = false;
             }
             else if (cardRadioBtn.Checked)
             {
                 paymentbtns= cardRadioBtn.Text;
+                payBtn.Visible = false;
             }
             else
             {

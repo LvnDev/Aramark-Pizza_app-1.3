@@ -31,7 +31,7 @@
         <br />
         <p>Payment Option</p>
         <asp:RadioButton ID="cardRadioBtn" runat="server" GroupName="PaymentOptions" Text="Card" />
-        <asp:RadioButton ID="cashRadioBtn" runat="server" GroupName="PaymentOptions" Text="Cash" />
+        <asp:RadioButton ID="cashRadioBtn" runat="server" Text="Cash" />
         <br />
         <br />
         <asp:Button ID="payBtn" runat="server" Text="Pay" OnClick="payBtn_Click" />

@@ -44,8 +44,8 @@ namespace Aramark_Pizza_app_1._3
             AramarkPizzaDatabaseEntities db = new AramarkPizzaDatabaseEntities();
             var dbcust = db.Customers;
 
-            int c = 2;
-            custIDlbl.Text = Orders.SelectedRow.Cells[c].Text;
+           
+            custIDlbl.Text = Orders.SelectedRow.Cells[2].Text;
             int custIDconvert = Int32.Parse(custIDlbl.Text);
 
             foreach(var customer in dbcust)

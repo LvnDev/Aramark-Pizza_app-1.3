@@ -11,7 +11,8 @@ namespace Aramark_Pizza_app_1._3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            orderNumlbl.Text = "Your Order Number: " + Session["OrderID"].ToString();
+            var vsordid = ViewState["OrderIDvs"] = Session["OrderID"].ToString();
+            orderNumlbl.Text = "Your Order Number: " + vsordid;
             custNumlbl.Text = "Customer ID: " + Session["CustomerID"].ToString();
         }
 
